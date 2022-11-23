@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{{ url_for('index') }}">
+    <img src="https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/08/premier_league_rebrands_designstudio_01.jpg" width="300" height="100" class="d-inline-block align-top" alt="">
+  </a>
+</nav>
+<h1 class="text-center">Liverpool Detail</h1>
+<div class="container">
+
+<div class="row align-items-center">
+    <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">team</h5>
+    <h6 class="card-subtitle mb-2 ">{{data['team'].values[0]}}</h6>
+  </div>
+</div>
+    </div>
+    <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">pos</h5>
+    <h6 class="card-subtitle mb-2 ">{{data['pos'].values[0]}}</h6>
+</div>
+</div>
+</div>
+    <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">points</h5>
+    <h6 class="card-subtitle mb-2">  {{data['points'].values[0]}}</h6>
+  </div>
+</div>
+</div>
+       <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">matches_played</h5>
+    <h6 class="card-subtitle mb-2">  {{data['matches_played'].values[0]}}</h6>
+  </div>
+</div>
+       </div>
+        <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">wins</h5>
+    <h6 class="card-subtitle mb-2 ">  {{data['wins'].values[0]}}</h6>
+  </div>
+</div>
+        </div>
+        <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">draws</h5>
+    <h6 class="card-subtitle mb-2 "> {{data['draws'].values[0]}}</h6>
+  </div>
+</div>
+</div>
+        <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">losses</h5>
+    <h6 class="card-subtitle mb-2 ">{{data['losses'].values[0]}}</h6>
+  </div>
+</div>
+        </div>
+        <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">goals_for</h5>
+    <h6 class="card-subtitle mb-2">{{data['goals_for'].values[0]}}</h6>
+  </div>
+</div>
+        </div>
+        <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">goals_against</h5>
+    <h6 class="card-subtitle mb-2 "> {{data['goals_against'].values[0]}}</h6>
+  </div>
+</div>
+</div>
+    <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">goal_diff</h5>
+    <h6 class="card-subtitle mb-2 "> {{data['goal_diff'].values[0]}}</h6>
+  </div>
+</div>
+        </div>
+        </div>
+    <div class="col">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">top_scorer</h5>
+    <h6 class="card-subtitle mb-2 "> {{data['top_scorer'].values[0]}}</h6>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+
+body {
+  background: #e6ecf0;
+  font-family: "Asap", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+.avator {
+  border-radius: 100px;
+  width: 48px;
+  margin-right: 15px;
+}
+
+.tweet-wrap {
+  max-width: 490px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 3px;
+  padding: 30px;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+}
+.tweet-header-info {
+  font-weight: bold;
+}
+.tweet-header-info span {
+  color: #657786;
+  font-weight: normal;
+  margin-left: 5px;
+}
+.tweet-header-info p {
+  font-weight: normal;
+  margin-top: 5px;
+}
+.tweet-img-wrap {
+  padding-left: 60px;
+}
+
+.tweet-info-counts {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.tweet-info-counts div {
+  display: flex;
+  margin-right: 20px;
+}
+.tweet-info-counts div svg {
+  color: #657786;
+  margin-right: 10px;
+}
+@media screen and (max-width: 430px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .tweet-header {
+    flex-direction: column;
+  }
+  .tweet-header img {
+    margin-bottom: 20px;
+  }
+  .tweet-header-info p {
+    margin-bottom: 30px;
+  }
+  .tweet-img-wrap {
+    padding-left: 0;
+  }
+  .tweet-info-counts {
+    display: flex;
+    margin-left: 0;
+  }
+  .tweet-info-counts div {
+    margin-right: 10px;
+  }
+}
+</style>
+
+
+
+<div class="tweet-wrap">
+  <div class="tweet-header">
+    <div class="tweet-header-info">
+      <span></span><span>
+</span>
+      <p>{{tweetts}}</p>
+
+    </div>
+
+  </div>
+
+
+    <div class="message">
+      <svg class="feather feather-send sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>

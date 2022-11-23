@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="{{url_for('index2')}}">Teams</a>
+                <a href="#">About us</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+
+        <title>
+            choose a league
+    </title>
+            <style>
+                 nav{
+                margin: 27px auto 0;
+                position: relative;
+                width:590px;
+                height: 50px;
+                background-color: #344953;
+                border-radius:8px;
+                font-size;0;
+            }
+            nav a {
+                line-height: 50px;
+                height: 100%;
+                font-size: 15px;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                color:white;
+                cursor:pointer;
+            }
+            nav .animation{
+                position: absolute;
+                height: 100%;
+                top: 0;
+                z-index: 0;
+                transition: all .5s ease 0s;
+                border-radius:8px;
+            }
+            a:nth-child(1){
+                width: 100px;
+            }
+            a:nth-child(2){
+                width: 110px;
+            }
+            a:nth-child(3){
+                width: 100px;
+            }
+            a:nth-child(4){
+                width: 160px;
+            }
+            a:nth-child(5){
+                width: 120px;
+            }
+            nav .start-home, a:nth-child(1):hover~.animation{
+                width: 100px;
+                left:0;
+                background-color: #1abc9c;
+            }
+            nav .start-home, a:nth-child(2):hover~.animation{
+                width: 100px;
+                left:0;
+                background-color: #e74c3c;
+            }
+            body{
+                font-size: 12px;
+                font-family: sans-serif;
+                background: #2c3e50;
+            }
+            span{
+                color: #2BD6B4;
+            }
+
+
+            body{
+                background-color: #F0FFFF;
+            }
+
+
+
+                body{
+                    background: #F0FFFF;
+                }
+                h1{
+                    background-color:DodgerBlue;
+                }
+
+                .premier_league{
+                    width: 200px;
+                    border: none;
+                    border-radius: 300px;
+                    cursor: pointer;
+                    transition: opacity 0.3s;
+                    margin-left: 145px;
+                }
+                .header_div{
+                    grid-area: ;
+                }
+
+        </style>    <!--https://www.w3schools.com/css/css_grid_item.asp -->
+    </head>
+        <body>
+        <h1
+            class="text-center">Welcome to your customisable sport news
+        </h1>
+            <div class = "header_div"><p></p>
+                <div>Premier league <!-- div is just a box, that we can group other elements together -->
+                    <div><a href="{{ url_for('index2') }}"><img class= "premier_league"src = "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/08/premier_league_rebrands_designstudio_01.jpg"></a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+<table class="table table-striped table-dark">
+    <tr>
+        {%for heading in header%}
+            <th>
+                {{heading}}
+            </th>
+        {%endfor%}
+    </tr>
+    {%for val in value%}
+    <tr>
+        {%for cell in val%}
+            <td>{{cell}}</td>
+        {%endfor%}
+    </tr>
+    {%endfor%}
+</table>
+</div>
+
+
+    </body>
+</html>

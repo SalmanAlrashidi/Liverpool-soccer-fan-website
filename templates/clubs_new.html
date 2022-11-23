@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- this file with contain top 3 clubs in the premier league -->
+<html>
+    <head>
+        <div>
+            <nav>
+                <a href={{url_for('index')}}>Home</a>
+                <a href="{{url_for('index2')}}">Teams</a>
+                <a href="#">About us</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <title>
+            Teams
+        </title>
+        <style>
+            nav{
+                margin: 27px auto 0;
+                position: relative;
+                width:590px;
+                height: 50px;
+                background-color: #344953;
+                border-radius:8px;
+                font-size;0;
+            }
+            nav a {
+                line-height: 50px;
+                height: 100%;
+                font-size: 15px;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                color:white;
+                cursor:pointer;
+            }
+            nav .animation{
+                position: absolute;
+                height: 100%;
+                top: 0;
+                z-index: 0;
+                transition: all .5s ease 0s;
+                border-radius:8px;
+            }
+            a:nth-child(1){
+                width: 100px;
+            }
+            a:nth-child(2){
+                width: 110px;
+            }
+            a:nth-child(3){
+                width: 100px;
+            }
+            a:nth-child(4){
+                width: 160px;
+            }
+            a:nth-child(5){
+                width: 120px;
+            }
+            nav .start-home, a:nth-child(1):hover~.animation{
+                width: 100px;
+                left:0;
+                background-color: #1abc9c;
+            }
+            nav .start-home, a:nth-child(2):hover~.animation{
+                width: 100px;
+                left:0;
+                background-color: #e74c3c;
+            }
+            body{
+                font-size: 12px;
+                font-family: sans-serif;
+                background: #2c3e50;
+            }
+            span{
+                color: #2BD6B4;
+            }
+
+
+            body{
+                background-color: #F0FFFF;
+            }
+
+.premier_league{
+    width: 200px;
+    border: none;
+    border-radius: 300px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+            }
+            .Liverpool{
+                width: 100%;
+                display: inline-block;
+                cursor: pointer;
+                    }
+                .Manchester_City{
+                    width: 100%;
+                    position: 300px;
+
+                    cursor: pointer;
+                            }
+                .Newcastle_united{
+                        width: 100%;
+                        display: inline-block;
+                        cursor: pointer;
+                                }
+            .liverpool_implemntation{
+                width: 150px;
+                display: inline-block;
+                cursor: pointer;
+                vertical-align: -400px;
+                margin-right: 100px;
+                margin-left: 200px;
+            }
+            .mancity_implemntation{
+                width: 150px;
+                display: inline-block;
+                vertical-align: -400px;
+                margin-right: 100px;
+            }
+            .Newcastle_implemntation{
+                width: 150px;
+                display: inline-block;
+                vertical-align: -400px;
+                margin-right: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div>
+            Premier league <!-- div is just a box, that we can group other elements together -->
+        </div>
+
+        <div class="liverpool_implemntation">
+              <a href="{{url_for('index1')}}">
+                  <img class= "Liverpool"src = "{{url_for('static', filename='Liverpool.png')}}">
+                  </a>
+        </div>
+        <div class="mancity_implemntation">
+            <img class= "Manchester_City"src = "{{url_for('static', filename='Manchester City.png')}}">
+        </div>
+
+        <div class="Newcastle_implemntation">
+            <img class="Newcastle_united" src="{{url_for('static', filename='Newcastle United.png')}}">
+        </div>
+
+    </body>
+</html>
