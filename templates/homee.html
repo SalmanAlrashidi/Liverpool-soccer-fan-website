@@ -9,7 +9,6 @@
                 <a href="{{url_for('index2')}}">Teams</a>
                 <a href="#">About us</a>
                 <a href="#">Blog</a>
-                <a href="#">Contact</a>
             </nav>
         </div>
 
@@ -105,16 +104,16 @@
                 .header_div{
                     grid-area: ;
                 }
-
         </style>    <!--https://www.w3schools.com/css/css_grid_item.asp -->
     </head>
         <body>
         <h1
             class="text-center">Welcome to your customisable sport news
         </h1>
-            <div class = "header_div"><p></p>
+            <div class = "header_div">
                 <div>Premier league <!-- div is just a box, that we can group other elements together -->
-                    <div><a href="{{ url_for('index2') }}"><img class= "premier_league"src = "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/08/premier_league_rebrands_designstudio_01.jpg"></a>
+                    <div>
+                        <a href="{{ url_for('index2') }}"><img class= "premier_league"src = "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/08/premier_league_rebrands_designstudio_01.jpg"></a>
                     </div>
                 </div>
             </div>

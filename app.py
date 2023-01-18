@@ -4,10 +4,12 @@ import tweepy
 import pandas as pd
 from soccer_data_api import SoccerDataAPI
 import json
-############Tweepy
+
+#Tweepy
+
 user_id = '881821981397704704'
 def api_connection(): # connect_to_twitter
-    bearer_token = '%%'
+    bearer_token = ''
     return {'Authorization':'bearer {}'.format(bearer_token)}
 headers = api_connection()
 def make_request(headers):
@@ -20,7 +22,6 @@ def df(response):
     return pd.DataFrame(response['data'])
 
 df = df(response)
-##################
 
 app = Flask(__name__)
 
@@ -70,65 +71,4 @@ if __name__ == '__main__':
 
 
 
-
-
-# API_Key =
-# API_key_secret = 'd
-# Bearer_token= 'd
-# Access_token = '44477
-# Access_Token_Secret = 'rBQK
-# auth = tweepy.OAuthHandler(API_Key, API_key_secret)
-# auth.set_access_token(API_Key, API_key_secret)
-# api = tweepy.API(auth)
-# cursor = tweepy.cursor
-
-
-
-
-
-
-
-
-
-
-# def index():
-#     auth = tweepy.OAuthHandler(API_Key, API_key_secret)
-#     auth.set_access_token(API_Key, API_key_secret)
-#     api = tweepy.API(auth)
-#
-#     search = request.args.get('q')
-#
-#     public_tweets = api.user_timeline(search)
-#
-#     return render_template('homee.html', tweets=public_tweets)
-#
-#
-# if __name__ == '__main__':
-#     app.run(debug=True)
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def home():
-#     return render_template("home.html")
-#
-# @app.route("/clubs_1")
-# def clubs_1():
-#     return render_template("clubs_1.html")
-#
-# if __name__ == '__main__':
-#     app.run()
 
